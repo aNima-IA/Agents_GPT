@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receptor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Receptor</h1>
+  <label>Room ID <input id="roomId" maxlength="64" /></label>
+  <button id="connectBtn" class="btn">Conectar</button>
+  <p id="status">Sin conexión</p>
+  <video id="remoteVideo" playsinline></video>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+  </script>
+  <script type="module" src="js/receiver.js"></script>
+</body>
+</html>

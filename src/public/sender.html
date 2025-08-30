@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emisor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Emisor</h1>
+  <label>Room ID <input id="roomId" maxlength="64" /></label>
+  <button id="startBtn" class="btn">Iniciar cámara</button>
+  <select id="cameraSelect"></select>
+  <button id="shareBtn" class="btn">Compartir QR</button>
+  <p id="status">Esperando...</p>
+  <video id="localVideo" playsinline muted></video>
+  <canvas id="qrCanvas"></canvas>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+  </script>
+  <script type="module" src="js/sender.js"></script>
+</body>
+</html>
