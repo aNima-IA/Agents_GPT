@@ -1,0 +1,8 @@
+{
+  "proxy": {"http": "http://127.0.0.1:8080"},
+  "scope": {"include": ["example.com"], "exclude": []},
+  "headers": [{"name": "X-Test", "value": "1"}],
+  "user_agent": "BBScan",
+  "timeout": 8,
+  "tls": {"verify": true}
+}
