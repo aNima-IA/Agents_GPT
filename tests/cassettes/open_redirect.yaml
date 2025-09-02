@@ -1,0 +1,17 @@
+interactions:
+- request:
+    method: GET
+    uri: https://example.com/redirect?next=https%3A%2F%2Fexample.com
+    body: null
+    headers: {}
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://example.com
+    body:
+      string: ''
+    url: https://example.com/redirect?next=https%3A%2F%2Fexample.com
+version: 1

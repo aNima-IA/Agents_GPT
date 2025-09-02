@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "proxy": {
+      "type": "object",
+      "properties": {
+        "http": {"type": "string"}
+      }
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "include": {"type": "array", "items": {"type": "string"}},
+        "exclude": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "headers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {"name": {"type": "string"}, "value": {"type": "string"}},
+        "required": ["name", "value"]
+      }
+    },
+    "user_agent": {"type": "string"},
+    "timeout": {"type": "number"},
+    "tls": {
+      "type": "object",
+      "properties": {"verify": {"type": "boolean"}}
+    }
+  }
+}
